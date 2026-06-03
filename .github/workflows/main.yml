@@ -8,6 +8,8 @@ on:
 jobs:
   install_package:
     runs-on: ubuntu-latest
+    env:
+      SECRET_KEY: ${{secrets.SECRET_KEY}}
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.2
